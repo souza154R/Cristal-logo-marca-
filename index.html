@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Cristal Espumas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+  body {
+  background: #0d0a14 !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    gap: 60px;
+  }
+ 
+  .label {
+    color: #7c5cbf88;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+ 
+  /* ── VERSÃO PRINCIPAL (fundo escuro) ── */
+  .logo-dark {
+    background: radial-gradient(ellipse at 40% 35%, #1e1030 0%, #0d0a14 70%);
+    border: 1px solid #2d1d4e;
+    border-radius: 24px;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .logo-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 80%, #6b2fa015 0%, transparent 60%);
+    pointer-events: none;
+  }
+ 
+  /* ── VERSÃO CLARA ── */
+  .logo-light {
+    background: linear-gradient(135deg, #f8f5ff 0%, #ede6ff 100%);
+    border: 1px solid #c9b3f0;
+    border-radius: 24px;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .logo-light::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, #9b59e820 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+ 
+  /* ── ÍCONE SVG ── */
+  .icon-wrap {
+    margin-bottom: 18px;
+    filter: drop-shadow(0 0 24px #7c3aed88);
+    animation: pulse 3s ease-in-out infinite;
+  }
+ 
+  .logo-light .icon-wrap {
+    filter: drop-shadow(0 4px 16px #7c3aed44);
+    animation: none;
+  }
+ 
+  @keyframes pulse {
+    0%, 100% { filter: drop-shadow(0 0 20px #7c3aed66); }
+    50%       { filter: drop-shadow(0 0 36px #a855f7bb); }
+  }
+ 
+  /* ── TEXTO ── */
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 52px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: linear-gradient(135deg, #c4a4f8 10%, #9b59e8 50%, #7c3aed 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+ 
+  .logo-light .brand-name {
+    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 60%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+ 
+  .tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #9f7fe0;
+    margin-top: 8px;
+  }
+ 
+  .logo-light .tagline {
+    color: #7c3aed99;
+  }
+ 
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #7c3aed66, transparent);
+    margin: 12px 0;
+  }
+ 
+  .logo-light .divider {
+    background: linear-gradient(to right, transparent, #7c3aed44, transparent);
+  }
+ 
+  /* ── VERSÃO MINI / ÍCONE QUADRADO ── */
+  .logo-icon-only {
+    background: linear-gradient(135deg, #3b1a6e 0%, #1e0d3a 100%);
+    border-radius: 20px;
+    width: 100px; height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px #7c3aed44;
+    animation: pulse 3s ease-in-out infinite;
+  }
+ 
+  .row { display: flex; gap: 32px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+</style>
+</head>
+<body>
+ 
+  <!-- ══ VERSÃO PRINCIPAL ESCURA ══ -->
+  <div class="col">
+    <span class="label">Versão Principal</span>
+    <div class="logo-dark">
+      <div class="icon-wrap">
+        <svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cristal central -->
+          <polygon points="40,4 58,20 58,50 40,66 22,50 22,20" fill="none" stroke="url(#grad1)" stroke-width="1.5"/>
+          <!-- Faceta topo -->
+          <polygon points="40,4 58,20 40,28 22,20" fill="url(#fill1)" opacity="0.7"/>
+          <!-- Faceta esquerda -->
+          <polygon points="22,20 40,28 40,54 22,50" fill="url(#fill2)" opacity="0.45"/>
+          <!-- Faceta direita -->
+          <polygon points="58,20 40,28 40,54 58,50" fill="url(#fill3)" opacity="0.6"/>
+          <!-- Faceta base -->
+          <polygon points="40,54 22,50 40,66 58,50" fill="url(#fill4)" opacity="0.5"/>
+          <!-- Linha central -->
+          <line x1="40" y1="4" x2="40" y2="28" stroke="#c4a4f8" stroke-width="1" opacity="0.8"/>
+          <line x1="40" y1="28" x2="40" y2="66" stroke="#7c3aed" stroke-width="1" opacity="0.5"/>
+          <line x1="22" y1="20" x2="58" y2="20" stroke="#9b59e8" stroke-width="0.8" opacity="0.6"/>
+          <line x1="22" y1="50" x2="58" y2="50" stroke="#7c3aed" stroke-width="0.8" opacity="0.4"/>
+          <!-- Brilho -->
+          <circle cx="34" cy="14" r="2.5" fill="white" opacity="0.6"/>
+          <circle cx="31" cy="18" r="1" fill="white" opacity="0.3"/>
+          <!-- Bolhas / espuma ao redor -->
+          <circle cx="10" cy="30" r="4.5" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.5"/>
+          <circle cx="10" cy="30" r="2" fill="#9b59e8" opacity="0.3"/>
+          <circle cx="70" cy="42" r="6" fill="none" stroke="#9b59e8" stroke-width="1" opacity="0.4"/>
+          <circle cx="70" cy="42" r="3" fill="#7c3aed" opacity="0.25"/>
+          <circle cx="14" cy="52" r="3" fill="none" stroke="#a855f7" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="67" cy="20" r="3.5" fill="none" stroke="#c4a4f8" stroke-width="0.8" opacity="0.35"/>
+          <circle cx="5"  cy="16" r="2" fill="#7c3aed" opacity="0.3"/>
+          <circle cx="74" cy="60" r="2.5" fill="none" stroke="#9b59e8" stroke-width="0.8" opacity="0.3"/>
+          <defs>
+            <linearGradient id="grad1" x1="22" y1="4" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e0ccff"/>
+              <stop offset="50%" stop-color="#9b59e8"/>
+              <stop offset="100%" stop-color="#5b21b6"/>
+            </linearGradient>
+            <linearGradient id="fill1" x1="22" y1="4" x2="58" y2="28" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e0ccff"/>
+              <stop offset="100%" stop-color="#9b59e8"/>
+            </linearGradient>
+            <linearGradient id="fill2" x1="22" y1="20" x2="40" y2="54" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#3b1a6e"/>
+            </linearGradient>
+            <linearGradient id="fill3" x1="58" y1="20" x2="40" y2="54" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#5b21b6"/>
+            </linearGradient>
+            <linearGradient id="fill4" x1="22" y1="50" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#5b21b6"/>
+              <stop offset="100%" stop-color="#2e1065"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="brand-name">Cristal</div>
+      <div class="divider"></div>
+      <div class="tagline">Fábrica de Espumas</div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <!-- ══ VERSÃO CLARA ══ -->
+    <div class="col">
+      <span class="label">Versão Clara</span>
+      <div class="logo-light">
+        <div class="icon-wrap">
+          <svg width="64" height="56" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="40,4 58,20 58,50 40,66 22,50 22,20" fill="none" stroke="url(#grad2)" stroke-width="1.5"/>
+            <polygon points="40,4 58,20 40,28 22,20" fill="url(#fillA)" opacity="0.55"/>
+            <polygon points="22,20 40,28 40,54 22,50" fill="url(#fillB)" opacity="0.3"/>
+            <polygon points="58,20 40,28 40,54 58,50" fill="url(#fillC)" opacity="0.45"/>
+            <polygon points="40,54 22,50 40,66 58,50" fill="url(#fillD)" opacity="0.35"/>
+            <line x1="40" y1="4" x2="40" y2="28" stroke="#7c3aed" stroke-width="1" opacity="0.7"/>
+            <line x1="40" y1="28" x2="40" y2="66" stroke="#5b21b6" stroke-width="1" opacity="0.4"/>
+            <line x1="22" y1="20" x2="58" y2="20" stroke="#9b59e8" stroke-width="0.8" opacity="0.5"/>
+            <line x1="22" y1="50" x2="58" y2="50" stroke="#7c3aed" stroke-width="0.8" opacity="0.3"/>
+            <circle cx="34" cy="14" r="2.5" fill="white" opacity="0.9"/>
+            <circle cx="10" cy="30" r="4" fill="none" stroke="#9b59e8" stroke-width="1" opacity="0.4"/>
+            <circle cx="70" cy="42" r="5" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.35"/>
+            <circle cx="14" cy="52" r="2.5" fill="none" stroke="#a855f7" stroke-width="0.8" opacity="0.35"/>
+            <circle cx="67" cy="20" r="3" fill="none" stroke="#7c3aed" stroke-width="0.8" opacity="0.3"/>
+            <defs>
+              <linearGradient id="grad2" x1="22" y1="4" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#9b59e8"/>
+                <stop offset="100%" stop-color="#5b21b6"/>
+              </linearGradient>
+              <linearGradient id="fillA" x1="22" y1="4" x2="58" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#c4a4f8"/>
+                <stop offset="100%" stop-color="#7c3aed"/>
+              </linearGradient>
+              <linearGradient id="fillB" x1="22" y1="20" x2="40" y2="54" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#9b59e8"/>
+                <stop offset="100%" stop-color="#5b21b6"/>
+              </linearGradient>
+              <linearGradient id="fillC" x1="58" y1="20" x2="40" y2="54" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#a855f7"/>
+                <stop offset="100%" stop-color="#7c3aed"/>
+              </linearGradient>
+              <linearGradient id="fillD" x1="22" y1="50" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#5b21b6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-name">Cristal</div>
+        <div class="divider"></div>
+        <div class="tagline">Fábrica de Espumas</div>
+      </div>
+    </div>
+ 
+    <!-- ══ ÍCONE ══ -->
+    <div class="col">
+      <span class="label">Ícone</span>
+      <div class="logo-icon-only">
+        <svg width="52" height="46" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="40,4 58,20 58,50 40,66 22,50 22,20" fill="none" stroke="url(#gradI)" stroke-width="1.5"/>
+          <polygon points="40,4 58,20 40,28 22,20" fill="url(#fI1)" opacity="0.8"/>
+          <polygon points="22,20 40,28 40,54 22,50" fill="url(#fI2)" opacity="0.5"/>
+          <polygon points="58,20 40,28 40,54 58,50" fill="url(#fI3)" opacity="0.65"/>
+          <polygon points="40,54 22,50 40,66 58,50" fill="url(#fI4)" opacity="0.55"/>
+          <line x1="40" y1="4" x2="40" y2="28" stroke="#e0ccff" stroke-width="1.2" opacity="0.9"/>
+          <circle cx="34" cy="14" r="3" fill="white" opacity="0.7"/>
+          <circle cx="10" cy="30" r="4" fill="none" stroke="#9b59e8" stroke-width="1" opacity="0.6"/>
+          <circle cx="70" cy="42" r="5" fill="none" stroke="#a855f7" stroke-width="1" opacity="0.5"/>
+          <defs>
+            <linearGradient id="gradI" x1="22" y1="4" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e0ccff"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+            <linearGradient id="fI1" x1="22" y1="4" x2="58" y2="28" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e0ccff"/>
+              <stop offset="100%" stop-color="#9b59e8"/>
+            </linearGradient>
+            <linearGradient id="fI2" x1="22" y1="20" x2="40" y2="54" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#3b1a6e"/>
+            </linearGradient>
+            <linearGradient id="fI3" x1="58" y1="20" x2="40" y2="54" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#5b21b6"/>
+            </linearGradient>
+            <linearGradient id="fI4" x1="22" y1="50" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#5b21b6"/>
+              <stop offset="100%" stop-color="#2e1065"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Paleta de cores -->
+  <div class="col">
+    <span class="label">Paleta de Cores</span>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:#e0ccff;margin-bottom:4px;"></div>
+        <span style="color:#555;font-size:9px;letter-spacing:1px;">#E0CCFF</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:#a855f7;margin-bottom:4px;"></div>
+        <span style="color:#555;font-size:9px;letter-spacing:1px;">#A855F7</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:#7c3aed;margin-bottom:4px;"></div>
+        <span style="color:#555;font-size:9px;letter-spacing:1px;">#7C3AED</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:#5b21b6;margin-bottom:4px;"></div>
+        <span style="color:#555;font-size:9px;letter-spacing:1px;">#5B21B6</span>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:48px;height:48px;border-radius:12px;background:#2e1065;margin-bottom:4px;"></div>
+        <span style="color:#555555;font-size:9px;letter-spacing:1px;">#2E1065</span>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>
